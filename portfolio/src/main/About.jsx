@@ -35,7 +35,6 @@ export default function About() {
     >
       <div className="absolute inset-0 bg-black/30"></div>
       <div className="absolute inset-0 bg-cyan-950/15"></div>
-      <div className="absolute inset-0 bg-[url('/bubbles.png')] bg-cover bg-center opacity-25"></div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
         <div className="scroll-reveal reveal-left mx-auto w-full max-w-sm">
@@ -87,14 +86,14 @@ export default function About() {
               Creative Toolkit
             </p>
 
-            <div className="grid grid-cols-2 gap-5 sm:grid-cols-5 xl:grid-cols-10">
+            <div className="toolkit-grid grid grid-cols-2 gap-5 sm:grid-cols-5 xl:grid-cols-10">
               {skillPics.map((pic, index) => (
                 <img
                   key={index}
                   src={pic}
                   alt=""
                   style={{ "--reveal-delay": `${index * 0.06}s` }}
-                  className="scroll-reveal reveal-soft aspect-square w-full min-w-0 rounded-2xl border border-cyan-200/40 bg-white/20 object-cover p-2 shadow-[0_0_20px_rgba(0,255,255,0.14)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-cyan-100 hover:bg-white/25 hover:shadow-[0_0_30px_rgba(0,255,255,0.42)]"
+                  className="toolkit-icon scroll-reveal reveal-soft aspect-square w-full min-w-0 rounded-2xl border border-cyan-200/40 bg-white/20 object-contain p-2 shadow-[0_0_20px_rgba(0,255,255,0.14)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-cyan-100 hover:bg-white/25 hover:shadow-[0_0_30px_rgba(0,255,255,0.42)]"
                 />
               ))}
             </div>

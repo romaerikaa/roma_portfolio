@@ -18,22 +18,21 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`fixed top-8 left-1/2 -translate-x-1/2 z-50 transition-all  duration-500 
+    <header className={`site-header fixed top-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 
          
-      px-50 py-3
          text-white 
-    rounded-3xl
-    bg-cyan-500/20
-    backdrop-blur-md
-    border border-cyan-300/40
-    shadow-[0_0_30px_rgba(0,255,255,0.35)] 
+      rounded-3xl
+      bg-cyan-500/20
+      backdrop-blur-md
+      border border-cyan-300/40
+      shadow-[0_0_30px_rgba(0,255,255,0.35)] 
       
       ${
     showHeader
       ? "opacity-100 translate-y-0"
       : "opacity-0 -translate-y-10 pointer-events-none"
     }`}>
-     <nav className="flex items-center gap-20 text-white text-lg font-semibold">
+     <nav className="site-nav flex items-center text-white font-semibold">
 
       <a href="#home" className="hover:text-cyan-200 transition">
         Home

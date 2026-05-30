@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "../node_modules/tailwindcss/index.css";
 
 html,
 body,
@@ -66,6 +66,32 @@ body,
   animation: floatFish 3s ease-in-out infinite;
 }
 
+.site-header {
+  width: min(88vw, 920px);
+  padding: 0.75rem clamp(1rem, 5vw, 5rem);
+}
+
+.site-nav {
+  justify-content: center;
+  gap: clamp(1.25rem, 6vw, 5rem);
+  font-size: clamp(0.95rem, 1.5vw, 1.125rem);
+  white-space: nowrap;
+}
+
+.fish-link {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  
+}
+
+.toolkit-grid {
+  justify-items: center;
+}
+
+.toolkit-icon {
+  max-width: 7.5rem;
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translate3d(var(--reveal-x, 0), var(--reveal-y, 48px), 0) scale(0.98);
@@ -97,6 +123,186 @@ body,
 
 .reveal-soft {
   --reveal-y: 28px;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    top: 1rem;
+    width: min(94vw, 680px);
+    padding: 0.7rem 1rem;
+  }
+
+  .site-nav {
+    gap: clamp(0.85rem, 4vw, 2rem);
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    top: 0.75rem;
+    width: calc(100vw - 1rem);
+    border-radius: 1rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.35rem;
+    width: 100%;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  .site-nav a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .fish-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: center;
+    justify-items: center;
+    gap: 1.25rem 1rem;
+    padding: 0 1.5rem;
+  }
+
+  .fish-link {
+    position: static;
+    transform: none;
+  }
+
+  .fish-home {
+    width: 8.5rem;
+  }
+
+  .fish-about {
+    width: 15rem;
+     padding: 0 1.5rem;
+     margin-top: -3rem;
+  }
+
+  .fish-projects {
+    width: 12rem;
+  }
+
+  .fish-contact {
+    width: 12rem;
+         margin-top: -5rem;
+
+  }
+
+  .fish-home img {
+    transform: rotate(-5deg);
+  }
+
+  
+
+  .float-fish {
+    animation: none;
+  }
+
+  .fish-swim-in {
+    animation: none;
+  }
+
+  .panorama-track {
+    background-size: auto 100%;
+    animation-duration: 75s;
+  }
+
+  .toolkit-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .toolkit-icon {
+    max-width: 5.5rem;
+    border-radius: 1rem;
+    padding: 0.55rem;
+  }
+
+  .reveal-left,
+  .reveal-right {
+    --reveal-x: 0;
+    --reveal-y: 34px;
+  }
+
+  .contact-section {
+    align-items: flex-start;
+    padding: 4.75rem 1rem 3rem;
+    background-position: center top;
+  }
+
+  .contact-glow {
+    display: none;
+  }
+
+  .contact-layout {
+    gap: 1.35rem;
+  }
+
+  .contact-copy {
+    text-align: center;
+  }
+
+  .contact-eyebrow {
+    margin-bottom: 0.6rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .contact-title {
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 1.04;
+  }
+
+  .contact-text {
+    margin: 1rem auto 0;
+    max-width: 22rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .contact-panel {
+    border-radius: 1.25rem;
+    padding: 0.85rem;
+  }
+
+  .contact-panel > div {
+    gap: 0.75rem;
+  }
+
+  .contact-item {
+    border-radius: 1rem;
+    padding: 0.9rem;
+  }
+
+  .contact-row {
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .contact-icon {
+    width: 2.35rem;
+    height: 2.35rem;
+    border-radius: 0.85rem;
+    font-size: 1rem;
+  }
+
+  .contact-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-value {
+    margin-top: 0.35rem;
+    font-size: clamp(0.92rem, 4.5vw, 1.1rem);
+    line-height: 1.25;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
