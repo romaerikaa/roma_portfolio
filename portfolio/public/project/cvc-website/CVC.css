@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Positioning for absolute elements */
+}
+
+
+.mySlides {
+    position: absolute; /* Positioning for full screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    opacity: 0; /* Start as fully transparent */
+    transition: opacity 3s ease; /* Fade effect */
+}
+
+.active {
+    opacity: 1; /* Fully visible */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content */
+    text-align: center;
+    color: white; /* Text color */
+    z-index: 1; /* Ensure content is above the slideshow */
+}
+
+h1 {
+    font-size: 3em; /* Headline size */
+    margin: 0; /* Remove default margin */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 50px;
+    background-color: #ffb10a; /* Button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Button hover effect */
+}
+
+.button:hover {
+    background-color: #a10000; /* Darker shade on hover */
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 20px 20px; /* Increased vertical padding */
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px; /* Set a minimum height for the nav */
+    /* Extended gradient with smoother transition */
+    background-image: linear-gradient(to bottom, 
+                      rgba(0, 0, 0, 1) 0%, 
+                      rgba(0, 0, 0, 0.8) 30%,
+                      rgba(0, 0, 0, 0.5) 60%,
+                      rgba(0, 0, 0, 0.2) 80%,
+                      rgba(0, 0, 0, 0) 100%);
+}
+
+nav a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 15px; /* Spacing between links */
+    font-size: 1.2em; /* Font size */
+}
+.logo {
+    width: 80px; /* Fixed width for circle */
+    height: 80px; /* Fixed height for circle */
+    border-radius: 50%; /* This makes it circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Optional: background if image has transparency */
+    border: 2px solid white; /* Optional: white border around circle */
+    margin-left: 50px; /* Added left margin - adjust this value as needed */
+}
+
+.logo img {
+    width: 80%; /* Slightly smaller than container to allow for border */
+    height: 80%;
+    object-fit: contain; /* Ensures entire logo is visible */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-right: auto; /* Pushes everything left */
+    margin-left: 35%; /* Adjust this value to move left more/less */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 2.0rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

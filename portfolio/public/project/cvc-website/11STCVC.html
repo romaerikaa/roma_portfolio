@@ -1,0 +1,135 @@
+
+<html>
+    
+<head>
+    <link rel="stylesheet" href="1CVC.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+   
+    <title>CVC Plaza Events Venue</title>
+   
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="cvc.jpg" alt="CVC Plaza Logo">
+        </div>
+      
+        <div class="nav-links">
+            <a href="#about us">ABOUT US</a>
+            <a href="#venues">VENUES</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#amenities">AMENITIES</a>
+        </div>
+    </nav>
+    
+    <div class="slideshow-container">
+        <div class="overlay"></div> <!-- Dark overlay -->
+        <img class="mySlides active" src="front2.jpg">
+        <img class="mySlides" src="front1.jpg">
+        <img class="mySlides" src="front3.jpg">
+        <img class="mySlides" src="front4.jpg">
+        <img class="mySlides" src="front5.jpg">
+
+        <div class="content">
+            <h1>Affordable Spaces for Priceless Memories</h1>
+            <button class="button" onclick="alert('Booking functionality coming soon!')">Book Now</button>
+        </div>
+    </div>
+<!-- Add this right before your closing </body> tag -->
+<div class="page-content">
+    <div class="description">
+   <p>
+    CVC Plaza Events Venue provides elegant, affordable spaces for weddings, corporate events, and special celebrations. 
+    Our versatile facilities accommodate both intimate gatherings and large parties, 
+    featuring modern amenities and customizable layouts. The experienced CVC team works 
+    closely with clients to bring their vision to life, offering professional event support from planning through execution.
+     With convenient location and comprehensive services, we make event hosting seamless. 
+    Contact us to schedule a tour and discover how we can make your occasion memorable.
+   </p>
+</div>
+</div>
+   <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+    <div class="gallery-cell">
+      <img src="gym.jpeg" alt="Gym Facility">
+    </div>
+    <div class="gallery-cell">
+      <img src="ran.jpg" alt="Event Space">
+    </div>
+    <div class="gallery-cell">
+      <img src="boni.jpg" alt="Banquet Hall">
+    </div>
+    <div class="gallery-cell">
+      <img src="roof.jpeg" alt="Rooftop Area">
+    </div>
+    <div class="gallery-cell">
+      <img src="hall.jpeg" alt="Main Hall">
+    </div>
+    
+ 
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let myIndex = 0; // Start with the first image
+        carousel();
+
+        function carousel() {
+            const slides = document.getElementsByClassName("mySlides");
+            slides[myIndex].classList.remove("active"); // Remove active class from current slide
+
+            myIndex = (myIndex + 1) % slides.length; // Move to the next image
+            slides[myIndex].classList.add("active"); // Add active class to the next slide
+
+            setTimeout(carousel, 4000); // Change image every 4 seconds
+        }
+    </script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</div>
+<div id="Contacts">
+    <hr width = "100%" size = "8" color = "#823e19">
+    <h1 align="center" class="contacts-heading"> Contact Us!</h1>
+<div class="coflogo">
+    <img id="coffeelogo" src="coffeelogo.jpg">
+    <div class="logo-description">
+        <p><b>Email:</b> coffeeshop@gmail.com</p>
+        <p><b>Phone Number:</b> +63 9090 090 0909</p>
+        <p><b>Address:</b> 123 Random Street, Random Brgy., Random City</p>
+    </div>
+</div>   
+
+</div>
+</body>
+
+
+</html>

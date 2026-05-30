@@ -1,0 +1,58 @@
+
+<html>
+    
+<head>
+    <link rel="stylesheet" href="CVC.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVC Plaza Events Venue</title>
+   
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="cvc.jpg" alt="CVC Plaza Logo">
+        </div>
+      
+        <div class="nav-links">
+            <a href="#about us">ABOUT US</a>
+            <a href="#venues">VENUES</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#amenities">AMENITIES</a>
+        </div>
+    </nav>
+    
+    <div class="slideshow-container">
+        <div class="overlay"></div> <!-- Dark overlay -->
+        <img class="mySlides active" src="front2.jpg">
+        <img class="mySlides" src="front1.jpg">
+        <img class="mySlides" src="front3.jpg">
+        <img class="mySlides" src="front4.jpg">
+        <img class="mySlides" src="front5.jpg">
+    </div>
+
+    <div class="content">
+        <h1>Welcome to CVC Plaza</h1>
+        <br><br><br><br><br><br><br><br><br><br>
+        
+        <button class="button" onclick="alert('Booking functionality coming soon!')">Book Now</button>
+    </div>
+
+    <script>
+        let myIndex = 0; // Start with the first image
+        carousel();
+
+        function carousel() {
+            const slides = document.getElementsByClassName("mySlides");
+            slides[myIndex].classList.remove("active"); // Remove active class from current slide
+
+            myIndex = (myIndex + 1) % slides.length; // Move to the next image
+            slides[myIndex].classList.add("active"); // Add active class to the next slide
+
+            setTimeout(carousel, 4000); // Change image every 4 seconds
+        }
+    </script>
+
+</body>
+</html>

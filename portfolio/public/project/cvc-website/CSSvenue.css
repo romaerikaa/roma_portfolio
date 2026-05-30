@@ -1,0 +1,257 @@
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #722121;
+  position: relative;
+  margin: 0 30px;
+}
+
+.logo img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.navshape {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed to center */
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+/* Left side links */
+.nav-links.left {
+  margin-right: 60px; /* Space for logo */
+  padding-right: 80px;
+}
+
+/* Right side links */
+.nav-links.right {
+  margin-left: 60px; /* Space for logo */
+  padding-right: 80px;
+}
+
+.nav-links a {
+  color: rgb(116, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.0rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background-color: rgb(101, 0, 0);
+}
+
+
+  .bg-maroon {
+    background-color: #722121;
+}
+.bg-maroon-light {
+    background-color: rgba(114, 33, 33, 0.8);
+}
+.bg-maroon-lighter {
+    background-color: rgba(114, 33, 33, 0.3);
+}
+.text-maroon {
+    color: #722121;
+}
+.border-maroon {
+    border-color: #722121;
+}
+
+/* Navigation styles */
+.navshape {
+    background-color: white;
+}
+.nav-links a {
+    color: #722121;
+}
+.nav-links a:hover {
+    color: white;
+    background-color: #722121;
+}
+
+/* Slide container - updated for side-by-side layout */
+.slide {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Slide content - updated for side-by-side layout */
+.slide-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Image container */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text container */
+.text-container {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+/* Image styling */
+.slide-img {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Background overlay for better text readability */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Individual slide colors */
+.slide-1 {
+    color: #722121;
+}
+.slide-1 .slide-overlay {
+    background-color: rgba(255,255,255,0.7);
+}
+
+.slide-2 {
+    color: white;
+}
+.slide-2 .slide-overlay {
+    background-color: rgba(114,33,33,0.7);
+}
+
+.slide-3 {
+    color: white;
+}
+.slide-3 .slide-overlay {
+    background-color: rgba(80,20,20,0.7);
+}
+
+.slide-4 {
+    color: #722121;
+}
+.slide-4 .slide-overlay {
+    background-color: rgba(255,255,255,0.5);
+}
+
+/* Reverse layout for alternating slides */
+.slide-content.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slide-content, .slide-content.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .text-container {
+        text-align: center;
+    }
+}
+
+/* Button styling */
+.button {
+    /* Layout */
+    padding: 10px 20px;
+    min-width: 200px;
+    
+    /* Typography */
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* Colors */
+    background: linear-gradient(135deg, #ffb10a 0%, #ffb10a 100%);
+    color: white;
+    
+    /* Borders */
+    border: none;
+    border-radius: 50px;
+    
+    /* Effects */
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Pop-in Animation */
+    margin-top: 20px;
+}
+
+/* Hover State */
+.button:hover {
+    background: linear-gradient(135deg, #fae541 0%, #fae541 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 140, 0, 0.5);
+}
+
+/* Active State */
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(255, 140, 0, 0.2);
+}
+
+.button span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.button:hover span {
+    transform: scale(1.08);
+}
+  

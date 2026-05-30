@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background: black;
+  scroll-behavior: smooth;
+}
+
+@keyframes panorama {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.panorama-track {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+  animation: panorama 55s linear infinite reverse;
+}
+
+@keyframes floatFish {
+  0%, 100% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, calc(-50% - 8px));
+  }
+}
+
+@keyframes swimInFish {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--fish-start-x)) scale(0.92);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(0) scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.fish-swim-in {
+  animation: swimInFish 1.15s cubic-bezier(0.16, 1, 0.3, 1) var(--fish-delay) both;
+}
+
+.float-fish {
+  animation: floatFish 3s ease-in-out infinite;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(var(--reveal-x, 0), var(--reveal-y, 48px), 0) scale(0.98);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.reveal-left {
+  --reveal-x: -70px;
+  --reveal-y: 0;
+}
+
+.reveal-right {
+  --reveal-x: 70px;
+  --reveal-y: 0;
+}
+
+.reveal-up {
+  --reveal-y: 54px;
+}
+
+.reveal-soft {
+  --reveal-y: 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

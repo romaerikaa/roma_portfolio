@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CSSvenue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVC Plaza - Amenities</title>
+    <style>
+        /* Reuse your existing navigation styles */
+        
+        /* Amenities Page Styles */
+        .amenities-header {
+            background-color: #f8f8f8;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 2px solid #722121;
+        }
+        
+        .amenities-header h1 {
+            font-family: 'Playfair Display', serif;
+            color: #722121;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .amenities-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .amenity-card {
+            display: flex;
+            margin-bottom: 40px;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .amenity-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #722121;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .amenity-icon img {
+            width: 50px;
+            height: 50px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .amenity-text {
+            flex: 1;
+        }
+        
+        .amenity-text h3 {
+            font-family: 'Playfair Display', serif;
+            color: #722121;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .amenity-text p {
+            font-family: 'Montserrat', sans-serif;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .cta-section {
+            background-color: #722121;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: white;
+            color: #722121;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: white;
+        }
+        
+        /* Footer - reuse your existing footer styles */
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navshape">
+            <div class="nav-links left-links">
+                <a href="v03.html">HOME</a>
+                <a href="v03.html#venues">VENUES</a>
+            </div>
+            
+            <div class="logo">
+                <img src="cvc.jpg" alt="CVC Plaza Logo">
+            </div>
+            
+            <div class="nav-links right-links">
+                <a href="v03.html#contact">CONTACT</a>
+                <a href="AmenitiesCVC.html">AMENITIES</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="amenities-header">
+        <h1>Our Amenities</h1>
+        <p>Everything you need for a successful event</p>
+    </header>
+
+    <div class="amenities-container">
+        <!-- Amenity 1 -->
+        <div class="amenity-card">
+            <div class="amenity-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3050/3050158.png" alt="Parking Icon">
+            </div>
+            <div class="amenity-text">
+                <h3>Ample Parking</h3>
+                <p>Convenient on-site parking for up to 100 vehicles with dedicated spaces for guests with disabilities.</p>
+            </div>
+        </div>
+        
+        <!-- Amenity 2 -->
+        <div class="amenity-card">
+            <div class="amenity-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="Sound System Icon">
+            </div>
+            <div class="amenity-text">
+                <h3>Audio-Visual Equipment</h3>
+                <p>Professional sound system, microphones, and projector available for all events at no extra cost.</p>
+            </div>
+        </div>
+        
+        <!-- Amenity 3 -->
+        <div class="amenity-card">
+            <div class="amenity-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png" alt="Preparation Room Icon">
+            </div>
+            <div class="amenity-text">
+                <h3>Bridal/Groom Suites</h3>
+                <p>Private, air-conditioned preparation rooms with full-length mirrors and comfortable seating.</p>
+            </div>
+        </div>
+        
+        <!-- Amenity 4 -->
+        <div class="amenity-card">
+            <div class="amenity-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2317/2317963.png" alt="Catering Icon">
+            </div>
+            <div class="amenity-text">
+                <h3>Catering Kitchen</h3>
+                <p>Fully-equipped kitchen available for caterers, with refrigerator space and food preparation areas.</p>
+            </div>
+        </div>
+        
+        <!-- Amenity 5 -->
+        <div class="amenity-card">
+            <div class="amenity-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2843/2843140.png" alt="WiFi Icon">
+            </div>
+            <div class="amenity-text">
+                <h3>High-Speed WiFi</h3>
+                <p>Complimentary high-speed internet access throughout the venue for all guests.</p>
+            </div>
+        </div>
+        
+        <!-- Amenity 6 -->
+        <div class="amenity-card">
+            <div class="amenity-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/103/103228.png" alt="Accessibility Icon">
+            </div>
+            <div class="amenity-text">
+                <h3>Accessibility Features</h3>
+                <p>Wheelchair ramps, accessible restrooms, and designated parking spaces available.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Ready to Book Your Event?</h2>
+        <p>Our venue comes with everything you need to make your occasion memorable</p>
+        <a href="v03.html#contact" class="cta-button">CONTACT US TODAY</a>
+    </section>
+
+    <!-- Reuse your existing footer here -->
+
+</body>
+</html>

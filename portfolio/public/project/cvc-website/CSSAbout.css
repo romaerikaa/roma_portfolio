@@ -1,0 +1,222 @@
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 2px solid #722121;
+  position: relative;
+  margin: 0 30px;
+}
+
+.logo img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.navshape {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Changed to center */
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0 40px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+/* Left side links */
+.nav-links.left {
+  margin-right: 60px; /* Space for logo */
+  padding-right: 80px;
+}
+
+/* Right side links */
+.nav-links.right {
+  margin-left: 60px; /* Space for logo */
+  padding-right: 80px;
+}
+
+.nav-links a {
+  color: rgb(116, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.0rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 40px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background-color: rgb(101, 0, 0);
+}
+
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+   text-align: center;
+}
+
+p{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.text-content {
+    order: 2; /* Makes text appear second */
+    flex: 1; /* Takes up equal space */
+    text-align: left; /* Align text to left within its container */
+}
+
+.about-container {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 40px; /* Space between image and text */
+    margin: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-end;
+    order: 1; /* Makes image appear first */
+    flex: 1; /* Takes up equal space */
+}
+
+.pic1 {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.mission h2, .vision h2 {
+    font-size: 2rem; /* Larger text */
+    color: #722121;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+    font-size: 1.2rem; /* Larger paragraph text */
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Optional separator */
+}
+
+.mission, .vision {
+    margin: 40px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    margin-top: 0;
+    height: 250px;
+    padding: 30px 0;
+    background-color: #999999;
+  }
+  .logoheader {
+      display: flex;
+      align-items: center; /* Vertically centers the logo and text */
+      justify-content: center; /* Horizontally centers the elements */
+      gap: 20px; /* Space between logo and text */
+  }
+  .lgheader {
+      width: 65px; /* Set your desired width */
+      height: 65px; /* Equal to width for perfect circle */
+      border-radius: 50%; /* Makes the image circular */
+      object-fit: cover; /* Ensures the image covers the area nicely */
+      border: 3px solid #722121; /* Adds border with the same color as your gallery */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds slight shadow */
+  }
+  .logoname {
+      font-size: 1.5rem; /* Adjust as needed */
+      margin: 0; /* Removes default margin */
+      color: #722121; /* Adjust text color as needed */
+      font-weight: 600; /* Medium weight for better readability */
+       font-family:'Cinzel',serif;
+  }
+  
+  .footer-columns {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      margin-top: 30px;
+      text-align: center;
+  }
+  
+  .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .headertitle{
+     font-size: 1.2rem; /* Adjust as needed */
+      margin: 0; /* Removes default margin */
+      color: #000000; /* Adjust text color as needed */
+      font-weight: 400; /* Medium weight for better readability */
+       font-family:'Cinzel',serif;
+  }
+  
+  .footerdetails {
+      display: flex;
+      align-items: center; /* Vertically centers the logo and text */
+      justify-content: center; /* Horizontally centers the elements */
+      gap: 20px; /* Space between logo and text */
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+  }
+  .headertext{
+    font-size: 0.9rem;
+      margin-top: 5px;
+  /* 👈 Adds vertical spacing between lines */
+      color: #505050;
+      font-weight: 300;
+      font-family: 'Cinzel', serif;
+       max-width: 400px;       /* 👈 limits the width */
+      text-align: center;     /* 👈 centers the content inside the limited width */
+      word-wrap: break-word;
+  }

@@ -1,0 +1,338 @@
+body{
+    background-color:rgb(252, 234, 212);
+    margin:0;
+    padding:0;
+ 
+}
+
+
+
+.navbar {
+    overflow: hidden;
+    background-color: maroon;
+    text-align: center; /* Center the inline elements */
+}
+
+.navbar a {
+    /* Change from float to display inline-block */
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #ffffff;
+    color: maroon;
+}
+
+#records{
+    position: relative;
+}
+
+#shop{
+    width: 100%;
+    height:100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 100px;
+    width: max-content;
+    text-shadow: 0 0 10px rgb(241, 154, 49), 0 0 20px bisque, 0 0 30px #ffc423, 0 0 40px bisque;
+    animation: flicker 0.5s infinite alternate; /* Flickers every 0.5s */
+}
+
+@keyframes flicker {
+    0% { text-shadow: 0 0 10px rgb(241, 154, 49), 0 0 20px bisque, 0 0 30px #ffc423, 0 0 40px bisque; }
+    25% { text-shadow: 0 0 15px rgb(241, 154, 49), 0 0 25px bisque, 0 0 35px #ffc423, 0 0 45px bisque; }
+    50% { text-shadow: 0 0 5px rgb(241, 154, 49), 0 0 10px bisque, 0 0 20px #ffc423, 0 0 30px bisque; }
+    75% { text-shadow: 0 0 12px rgb(241, 154, 49), 0 0 22px bisque, 0 0 32px #ffc423, 0 0 42px bisque; }
+    100% { text-shadow: 0 0 10px rgb(241, 154, 49), 0 0 20px bisque, 0 0 30px #ffc423, 0 0 40px bisque; }
+}  
+h2 {
+    color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    
+  }
+  
+  @keyframes example {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+  }
+
+h2 {
+    text-align: center;
+    font-size:100px ;
+  }
+  
+
+.albums {
+    text-align: center;
+}
+
+.album-item {
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    vertical-align: top;
+    padding:50 ;
+}
+
+.album-item img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    width: 100%;
+    margin: 5px 0;
+    height: 60px; /* Fixed height for descriptions */
+    overflow: hidden; /* Hide overflow text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price{
+    font-size:20px ;
+    height: 30px; /* Fixed height for price */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart, .buy {
+    margin-bottom: 5px;
+    width: 80%; /* Makes buttons a consistent width */
+}
+
+
+.cart{
+    background-color: rgb(252, 234, 212); 
+    color: black; 
+    border: 2px solid maroon;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 8px 25px;
+    border-radius: 3px;
+    transition: all 0.3s ease; /* Adds smooth transition for all changes */
+}
+
+.cart:hover {
+    background-color: maroon; /* Changes background color on hover */
+    color: white; /* Changes text color on hover */
+    transform: scale(1.05); /* Makes the button slightly larger */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for "pop" effect */
+}
+
+.buy{
+    background-color: maroon; 
+    color: white; 
+    border: 2px solid maroon;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 8px 25px;
+    border-radius: 3px;
+    transition: all 0.3s ease; /* Adds smooth transition for all changes */
+
+}
+.buy:hover {
+   
+    color: white; /* Changes text color on hover */
+    transform: scale(1.05); /* Makes the button slightly larger */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for "pop" effect */
+}
+
+.cart, .buy {
+    margin-bottom: 5px;
+    width: 80%; /* Makes buttons a consistent width */
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#introabout {
+    text-align: center;
+    font-size: 100px; /* Makes the font size twice as large */
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+
+
+.about p {
+    font-size: 1.1em; /* Sets a comfortable font size for the rest of the text */
+    line-height: 3;
+    max-width: 80%; /* Optional: Limits the width for readability */
+    column-count: 3;
+  column-gap: 40px;
+  column-rule: 1px solid lightblue;
+}
+
+.contacts p{
+    text-align: center;
+    font-size: 50px; /* Makes the font size twice as large */
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column; /* Stacks text and images vertically */
+    align-items: center; /* Centers everything horizontally */
+    text-align: center;
+}
+.contact-icons {
+    display: flex;
+    justify-content: center; /* Centers icons */
+    gap: 25px; /* Adds space between images */
+}
+
+.contacts img {
+    width: 50px;
+    height: 50px;
+   
+}
+
+/* Style for all tooltip containers */
+.tooltip1, .tooltip2, .tooltip3, .tooltip4, .tooltip5 {
+    position: relative;
+    display: inline-block;
+    margin: 5px; /* Adds spacing between icons */
+}
+
+/* Style for tooltip text */
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip arrow */
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Places the arrow at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; /* Creates an upward arrow */
+}
+
+/* Show tooltip on hover */
+.tooltip1:hover .tooltiptext,
+.tooltip2:hover .tooltiptext,
+.tooltip3:hover .tooltiptext,
+.tooltip4:hover .tooltiptext,
+.tooltip5:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    /* Navbar items go vertical */
+    .navbar {
+      padding: 5px 0;
+    }
+    
+    .navbar a {
+      display: block;
+      font-size: 18px;
+      padding: 8px 0;
+    }
+    
+    /* Smaller banner text */
+    .centered {
+      font-size: 40px;
+    }
+    
+    /* Album display - 1 per row */
+    .album-item {
+      width: 75%;
+      margin: 10px auto;
+    }
+    
+    /* Smaller heading sizes */
+    h2 {
+      font-size: 40px;
+    }
+    
+    #introabout {
+      font-size: 40px;
+    }
+    
+    /* About section as single column */
+    .about p {
+      column-count: 1;
+      line-height: 2;
+      max-width: 90%;
+    }
+    
+    /* Description and price adjustments */
+    .description {
+      font-size: 20px;
+      height: auto;
+      min-height: 60px;
+    }
+    
+    /* Contact section adjustments */
+    .contacts p {
+      font-size: 30px;
+    }
+    
+    .contact-icons {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .contacts img {
+      width: 40px;
+      height: 40px;
+    }
+  }
