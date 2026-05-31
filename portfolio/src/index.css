@@ -58,6 +58,23 @@ body,
   }
 }
 
+@keyframes archivePopIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.35) rotate(-4deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08) rotate(1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
 @keyframes floatFishMobile {
   0%, 100% {
     transform: translateY(0);
@@ -92,6 +109,21 @@ body,
   position: absolute;
   transform: translate(-50%, -50%);
   
+}
+
+.home-archive-logo {
+  position: absolute;
+  left: 52%;
+  top: 45%;
+  z-index: 20;
+  width: clamp(30rem, 45vw, 80rem);
+  height: auto;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: archivePopIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  filter:
+    drop-shadow(0 0 20px rgba(0, 255, 76, 0.65))
+    drop-shadow(0 18px 26px rgba(0, 0, 0, 0.5));
 }
 
 .toolkit-grid {
@@ -172,37 +204,45 @@ body,
   }
 
   .fish-menu {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-content: center;
-    justify-items: center;
-    gap: 1.25rem 1rem;
-    padding: 0 1.5rem;
+    display: block;
+    padding: 0;
+  }
+
+  .home-archive-logo {
+    top: 46%;
+    width: 80vw;
+    filter:
+      drop-shadow(0 0 20px rgba(0, 255, 76, 0.65))
+    drop-shadow(0 18px 26px rgba(0, 0, 0, 0.5));
   }
 
   .fish-link {
-    position: static;
-    transform: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
   }
 
   .fish-home {
+    left: 40%;
+    top: 50%;
     width: 8.5rem;
   }
 
   .fish-about {
+    left: 70%;
+    top: 15%;
     width: 15rem;
-     padding: 0 1.5rem;
-     margin-top: -3rem;
   }
 
   .fish-projects {
-    width: 12rem;
+    left: 30%;
+    top: 25%;
+    width: 15rem;
   }
 
   .fish-contact {
+    left: 73%;
+    top: 65%;
     width: 12rem;
-         margin-top: -5rem;
-
   }
 
   .fish-home img {
@@ -212,7 +252,7 @@ body,
   
 
   .float-fish {
-    animation: floatFishMobile 3s ease-in-out infinite;
+    animation: floatFish 3s ease-in-out infinite;
   }
 
   .panorama-track {
